@@ -87,6 +87,14 @@ RNFlipboardFlex.toggleExplorer();
 
 **Notes**
 
+Please add the following line to your Podfile to exclude for Release builds.
+
+```
+pod 'FLEX', :configurations => ['Debug']
+```
+
+The library recognizes `DEBUG` and `BETA` preprocessors to include FLEX.
+
 > See [Flex github](https://github.com/Flipboard/FLEX)
 
 ---
