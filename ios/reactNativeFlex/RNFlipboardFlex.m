@@ -8,7 +8,7 @@
 
 #import "RNFlipboardFlex.h"
 
-#if FLEXTOOL || BETA
+#if FLEXTOOL || DEBUG
 #import "FLEXManager.h"
 #endif
 
@@ -19,7 +19,7 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(showExplorer)
 {
-#if FLEXTOOL || BETA
+#if FLEXTOOL || DEBUG
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] showExplorer];
     });
@@ -28,7 +28,7 @@ RCT_EXPORT_METHOD(showExplorer)
 
 RCT_EXPORT_METHOD(hideExplorer)
 {
-#if FLEXTOOL || BETA
+#if FLEXTOOL || DEBUG
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] hideExplorer];
     });
@@ -37,7 +37,7 @@ RCT_EXPORT_METHOD(hideExplorer)
 
 RCT_EXPORT_METHOD(toggleExplorer)
 {
-#if FLEXTOOL || BETA
+#if FLEXTOOL || DEBUG
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] toggleExplorer];
     });
